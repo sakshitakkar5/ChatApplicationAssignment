@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socket.IO Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Username Popup Modal -->
+  <div id="usernameModal" class="modal">
+    <div class="modal-content">
+      <h3>👋 Welcome!</h3>
+      <p>Enter your name to join the chat:</p>
+      <input type="text" id="usernameInput" placeholder="Your name" />
+      <button id="joinBtn">Join Chat</button>
+    </div>
+  </div>
+
+  <!-- Chat Container -->
+  <div class="chat-container hidden">
+    <h2>💬 Real-Time Chat</h2>
+    <div id="messages"></div>
+
+    <input id="message" type="text" placeholder="Type a message..." />
+    <button id="sendBtn">Send</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>

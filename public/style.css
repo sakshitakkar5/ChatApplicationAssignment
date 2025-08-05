@@ -1,0 +1,199 @@
+
+
+
+
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Chat Container */
+.chat-container {
+  width: 420px;
+  background: #ffffffdd;
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.chat-container h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 15px;
+  font-size: 28px;
+  text-shadow: 1px 1px 2px #ccc;
+}
+
+/* Messages Section */
+#messages {
+  height: 300px;
+  overflow-y: auto;
+  border: none;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #e0f7fa, #f1f8ff);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+}
+
+.message {
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+  animation: slideIn 0.4s ease-in-out;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.message:hover {
+  transform: translateX(5px);
+  background: #f0f8ff;
+}
+
+.message strong {
+  color: #007bff;
+}
+
+/* Input and Button Styles */
+input {
+  padding: 12px;
+  margin: 5px 0;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+button {
+  padding: 12px;
+  margin-top: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+}
+
+/* Scrollbar Styling */
+#messages::-webkit-scrollbar {
+  width: 8px;
+}
+#messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #4facfe, #00f2fe);
+  border-radius: 10px;
+}
+#messages::-webkit-scrollbar-track {
+  background: #f1f8ff;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+/* Hide elements initially */
+.hidden {
+  display: none;
+}
+
+/* Modal Background */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content Box */
+.modal-content {
+  background: #ffffffdd;
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.modal-content p {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+#usernameInput {
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#usernameInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+}
+
+#joinBtn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+#joinBtn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+}
+
+
+
+
